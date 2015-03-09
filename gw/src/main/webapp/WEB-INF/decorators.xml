@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<decorators defaultdir="/decorators">
+   <!-- 在excludes元素下指定的页面将不会由SiteMesh来装饰 -->
+<!--     <excludes>
+         <pattern>/pages/</pattern>
+         <pattern>/pages/login.jsp</pattern>
+         <pattern>/pages/error/*</pattern>
+         <pattern>/map/register.jsp</pattern>
+           <pattern>/map/tresty.jsp</pattern>
+    </excludes> -->
+ <excludes> 
+ <pattern>/front/health/*</pattern>
+ <pattern>/front/brandmsg/*</pattern>
+ <pattern>/front/sale/*</pattern>
+ <pattern>/front/joinus/*</pattern>
+ <pattern>/front/mainproduct/*</pattern>
+ <pattern>/background/top.jsp</pattern>
+ <pattern>/background/left.jsp</pattern>
+ </excludes>
+ <!-- 创建一个名为main的装饰器，该装饰器页面为main.jsp,
+      用于装饰pattern指定的URL的所有页面-->
+          <decorator name="frontMain" page="frontMain.jsp">
+        <pattern>/front/*</pattern>
+    </decorator>
+          <decorator name="backgroundMain" page="backgroundMain.jsp">
+        <pattern>/background/*</pattern>
+    </decorator>
+<!--     <decorator name="appMain" page="appMain.jsp">
+        <pattern>/pages/*</pattern>
+    </decorator> -->
+</decorators>

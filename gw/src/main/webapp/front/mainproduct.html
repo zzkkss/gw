@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>果园老农--主力产品</title>
+ <script src="jscss/js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script>
+
+
+ 
+	$(function() {
+		var index_div_pro = [ {
+			sx : -1,
+			chushibilv:0,
+			chushiweiyi:0,
+			mh : 0.02
+		}, {
+			sx : 1,
+			chushibilv:0.5,
+			chushiweiyi:460,
+			mh : 0.01
+		} ];
+		var ePageX = $(window).width() / 2;
+		  $("#indexg0").css("width",
+					($(window).width()) *1.2);  
+		  $("#indexg1").css("left",
+					($(window).width())*0.5-440);    
+		function getMousePos(expression) {
+			if (ePageX == null)
+				return null;
+			var _x = $(expression).position().left;
+			_x += ePageX - $(expression).parent().position().left;
+			return {
+				x : _x
+			}
+		}
+		;
+		/* var index_xh = setInterval(function() {
+			for (var i = 0; i < 2; i++) {
+				var mousepos = getMousePos("#indexg" + i);
+				if (mousepos != null) {
+					var left = parseInt($("#indexg" + i).css("left"));
+					var l = ($(window).width()*index_div_pro[i].chushibilv-index_div_pro[i].chushiweiyi+ (mousepos.x)*index_div_pro[i].mh)
+					*index_div_pro[i].sx;
+					$("#indexg" + i).css({
+						left : l
+					})
+				}
+			}
+		}, 20); */
+		$("body").mousemove(function(event) {
+			event = event || window.event;
+			ePageX = event.pageX
+		});
+		 
+		 
+					
+		  $( ".zuolian" ).click(function() {
+		    		$(".zuolian").css("background-image","");
+		    		$("#"+this.id).css("background-image","url('front/images/health/health_0000s_0000s_0001s_0001_lv.png')");
+		    		document.getElementById("articleframe").src="front/mainproduct/zhulichanpin.jsp?rows=25&page=1&type="+this.id;
+		    		//window.frames["articleframe"].src="front/mainproduct/zhulichanpin.jsp?rows=25&page=1&type="+this.id;
+		    	});
+					
+	});
+</script>
+    <style type="text/css">
+     #indexg0 {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+
+#indexg1{
+left: 0;
+    position: absolute;
+    top: 15%;
+  width: 880px;
+  height:500px;
+     background-color: rgba(0,0,0,0.6);
+      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,endColorstr=#99000000); 
+ 
+}
+ .indexgimg {
+width: 100%;
+height: 100%;
+border: none;
+}
+.zuo {
+  border-right: 2px solid #6c6c6c;
+  height: 100%;
+  width: 125px;
+  position: absolute;
+  z-index: 6;
+  
+}
+.you {
+  height: 100%;
+  left: 125px;
+  position: absolute;
+  top: 0;
+  width: 755px;
+  overflow: hidden;
+  z-index: 6;
+}
+.zuotitle {
+  border-bottom: 2px solid #6c6c6c;
+  color: rgb(255, 255, 255);
+  display: block;
+  font-family: "Microsoft YaHei";
+  font-size: 20px;
+  line-height: 1.664;
+  margin: 30px auto;
+  text-align: center;
+  text-transform: uppercase;
+  width: 86px;
+  margin-top: 30px;
+  cursor: default;
+}
+ .zuolian {
+  color: rgb(255, 255, 255);
+  display: block;
+  font-family: "Microsoft YaHei";
+  font-size: 12px;
+  line-height: 2.0;
+  margin: 0 auto;
+  text-align: center;
+  text-transform: uppercase;
+  width: 89px;
+  cursor: pointer;
+}
+ .zuolian:hover {
+  background-color: #26723a;
+}
+#articleframe {
+  border: medium none;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 20px;
+  left: 25px;
+}
+.you a {
+  color: rgb(255, 255, 255);
+  font-family: "Microsoft YaHei";
+  font-size: 10px;
+  top:5px;
+  margin: 0 auto;
+  right: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  position: absolute;
+  z-index: 5;
+  text-decoration: none;
+  border: 1px solid;
+}
+    </style>
+</head>
+<body style="height: 825px;">
+	<div>
+		<div  id="indexg0">
+			<img class="indexgimg" src="front/images/newproduct/newproduct_0000_bg.png" />
+  
+		</div>
+		<div id="indexg1">
+		<div id="zuo" class="zuo">
+		<div class="zuotitle">主力产品</div>
+		<div class="zuolian" id="0" >进口果仁系列</div>
+		<div class="zuolian" id="1" >进口果干系列</div>
+		<div class="zuolian" id="2" >国产果仁系列</div>
+		<div class="zuolian" id="3" >国产蜜饯系列</div>
+		<div class="zuolian" id="4" >西梅系列</div>
+		<div class="zuolian" id="5" >罐装系列</div>
+		<div class="zuolian" id="6" >礼品装系列</div>
+		<div class="zuolian" id="7" >专卖店专有系列</div>
+		<div class="zuolian" id="8" >其他系列</div>
+		<div class="zuolian" id="9" >服务性产品</div>
+		</div>
+		<div id="you" class="you">
+		<a href="front/newproduct.html">← back </a>
+		<iframe id="articleframe" name="articleframe" class="articleframe"  frameborder="0"  allowtransparency src="front/mainproduct/zhulichanpin.jsp?type=0&rows=25&page=1" ></iframe>
+			
+		</div>
+	
+	</div>
+	</div>
+</body>
+</html>

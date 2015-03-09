@@ -1,0 +1,541 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>果园老农--关于我们</title>
+ <script src="jscss/js/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <link href="jscss/css/jquery.excoloSlider.css" rel="stylesheet" />
+    <script src="jscss/js/jquery.excoloSlider.min.js"></script>
+<script type="text/javascript">
+
+
+$(function() {
+wy=$(window).width() *0.55;
+	var index_div_pro = [ {
+		sx : -1,
+		chushibilv:0,
+		chushiweiyi:0,
+		mh : 0.02
+	}, {
+		sx : 1,
+		chushibilv:0.5,
+		chushiweiyi:wy,
+		mh : 0.01
+	} ];
+	var ePageX = $(window).width() / 2;
+	  $("#indexg0").css("width",
+			($(window).width()) *1.1);  
+	  $("#indexg1").css("width",
+			($(window).width()) *1.0);  
+	function getMousePos(expression) {
+		if (ePageX == null)
+			return null;
+		var _x = $(expression).position().left;
+		_x += ePageX - $(expression).parent().position().left;
+		return {
+			x : _x
+		}
+	}
+	;
+	/* var index_xh = setInterval(function() {
+		for (var i = 0; i < 2; i++) {
+			var mousepos = getMousePos("#indexg" + i);
+			if (mousepos != null) {
+				var left = parseInt($("#indexg" + i).css("left"));
+				var l = ($(window).width()*index_div_pro[i].chushibilv-index_div_pro[i].chushiweiyi+ (mousepos.x)*index_div_pro[i].mh)
+				*index_div_pro[i].sx;
+				$("#indexg" + i).css({
+					left : l
+				})
+			}
+		}
+	}, 20); */
+	$("body").mousemove(function(event) {
+		event = event || window.event;
+		ePageX = event.pageX
+	});
+/* 	  $("#chengdu").css("left",
+				($(window).width()) *0.5);  
+	  $("#xian").css("left",
+				($(window).width()) *0.5-310-160);   */
+	  $("#companyx").css("left",
+				($(window).width()) *0.5+410);   
+	 
+})
+    </script>
+    <style type="text/css">
+    .company_slide-prev {
+    cursor: pointer;
+   /*  height: 48px;
+    width: 48px; */
+    position: absolute;
+    left: 0;
+    top: 175px;
+    margin-top: -24px;
+    padding: 0px;
+}
+.company_slide-next {
+    cursor: pointer;
+   /*  height: 48px;
+    width: 48px; */
+    position: absolute;
+    right: 120px;
+    top: 175px;
+    margin-top: -24px;
+    padding: 0px;
+}
+
+
+
+
+.nian {
+height:320px;
+  position: absolute;
+  top: 50px;
+  z-index: 6;
+   margin: 34px 50px;
+  left: 50%;
+}
+._2011 {
+  background-image: url("front/images/companyIntroduction/company_pinpai_2011.png");
+  position: absolute;
+  left: 268px;
+  top: 96px;
+  width: 124px;
+  height: 86px;
+  z-index: 9;
+}
+
+._2010 {
+  background-image: url("front/images/companyIntroduction/company_pinpai_2010.png");
+  position: absolute;
+  left: 134px;
+  top: 96px;
+  width: 124px;
+  height: 86px;
+  z-index: 8;
+}
+
+._2009 {
+  background-image: url("front/images/companyIntroduction/company_pinpai_2009.png");
+  position: absolute;
+  top: 96px;
+  width: 124px;
+  height: 86px;
+  z-index: 7;
+}
+
+._2008 {
+  background-image: url("front/images/companyIntroduction/company_pinpai_2008.png");
+  position: absolute;
+  left: 268px;
+  width: 124px;
+  height: 86px;
+  z-index: 6;
+}
+
+._2007 {
+  background-image: url("front/images/companyIntroduction/company_pinpai_2007.png");
+  position: absolute;
+  left: 134px;
+  width: 124px;
+  height: 86px;
+  z-index: 5;
+}
+
+._2006 {
+  background-image: url("front/images/companyIntroduction/company_pinpai_2006.png");
+  position: absolute;
+  width: 124px;
+  height: 86px;
+  z-index: 4;
+}
+
+ul.es-pager li {
+border:0 none;
+  background-position: 0 -21px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  display: inline-block;
+  
+  zoom:1;*display:inline;
+  height: 21px;
+  margin: 10px;
+  padding: 0;
+  width: 28px;
+  background-color:transparent;
+  background-image: url("front/images/companyIntroduction/company_0000s_0000s_0000_p.png");
+}
+ul.es-pager li:hover, ul.es-pager li.act {
+      background-position: 0 0;
+       background-color:transparent;
+    background-image: url("front/images/companyIntroduction/company_0000s_0000s_0000_p.png");
+}
+.slider {
+  height: 385px;
+  min-width: 1024px;
+  padding: 0;
+  position: absolute;
+  border:0 none;
+   z-index: 6;
+}
+.slide {
+  height: 385px;
+}
+.shipin {
+  position: absolute;
+  top: 50px;
+  z-index: 6;
+   margin: 34px 50px;
+  left: 50%;
+  height: 320px;
+}
+#companyx {
+  height: 23px;
+  left: 80%;
+  position: absolute;
+  top: -2%;
+  width: 23px;
+  z-index: 39;
+   margin: 0 50px;
+  
+}
+#companyx img {
+ border: 0 none;
+}
+#xian {
+  background-image: url("front/images/companyIntroduction/company_xiaoshou_0000s_xian.png");
+  background-position: 0 25px;
+  background-repeat: no-repeat;
+  height: 240px;
+  margin: 34px 50px;
+  position: absolute;
+  top: 50px;
+  width: 300px;
+  right: 50%;
+}
+#xian span{
+  font-size: 14px;
+  font-family: "Microsoft YaHei";
+  color: #009900;
+  text-transform: uppercase;
+  position: absolute;
+  width: 75px;
+}
+
+
+#xian a{
+font-size: 12px;
+  font-family: "Microsoft YaHei";
+  color: rgb( 255, 255, 255 );
+  text-transform: uppercase;
+  text-decoration:none;
+top:0px;
+right:0px;
+  position: absolute;
+  width: 75px;
+}
+#xian p{
+font-size: 12px;
+  font-family: "Microsoft YaHei";
+  color: rgb( 255, 255, 255 );
+  text-transform: uppercase;
+  text-decoration:none;
+bottom:0px;
+left:0px;
+  position: absolute;
+}
+
+#chengdu {
+  background-image: url("front/images/companyIntroduction/company_xiaoshou_0000s_chengdu.png");
+  background-repeat:no-repeat;
+  background-position:0 25px;
+  height: 240px;
+  position: absolute;
+  top: 50px;
+  width: 310px;
+  margin: 34px 50px;
+  left: 50%;
+}
+#chengdu span{
+  font-size: 14px;
+  font-family: "Microsoft YaHei";
+  color: #009900;
+  text-transform: uppercase;
+  position: absolute;
+  width: 75px;
+}
+
+
+#chengdu a{
+font-size: 12px;
+  font-family: "Microsoft YaHei";
+  color: rgb( 255, 255, 255 );
+  text-transform: uppercase;
+  text-decoration:none;
+top:0px;
+right:0px;
+  position: absolute;
+  width: 75px;
+}
+#chengdu p{
+font-size: 12px;
+  font-family: "Microsoft YaHei";
+  color: rgb( 255, 255, 255 );
+  text-transform: uppercase;
+  text-decoration:none;
+bottom:0px;
+left:0px;
+  position: absolute;
+}
+     #indexg0 {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+   
+}
+    #indexg1 {
+    left: 0;
+    position: absolute;
+    top: 25%;
+    height: 385px;
+    background-color: rgba(0,0,0,0.6);
+         filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,endColorstr=#99000000); 
+    overflow: inherit;
+}
+ .indexgimg {
+width: 100%;
+height: 100%;
+}
+#jieshaozuo{
+  height: 320px;
+  width: 430px;
+  position: absolute;
+  top: 50px;
+   margin: 34px 50px;
+  right: 50%;
+
+}
+#pinpaizuo{
+  height: 320px;
+  width: 430px;
+  position: absolute;
+  top: 50px;
+   margin: 34px 50px;
+  right: 50%;
+
+}
+.wenhuazuo{
+  height: 320px;
+  width: 430px;
+  position: absolute;
+  top: 100px;
+   margin: 34px 50px;
+  right: 50%;
+
+}
+.naianfenhover {
+  position: absolute;
+  top: 0;
+  left: 25%;
+  z-index: 99;
+  display: none;
+  border: none;
+}
+.shipinimg {
+  width: 374px;
+  height: 267px;
+  border: none;
+}
+.zuoimg {
+  width: 465px;
+  height: 206px;
+  border: none;
+}
+.youimg {
+  width: 374px;
+  height: 267px;
+  border: none;
+}
+
+.slide-dragcontainer{
+height: 100%;
+}
+
+</style>
+<script type="text/javascript">
+function GetQueryString(name)
+{
+     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+     var r = window.location.search.substr(1).match(reg);
+     if(r!=null)return  unescape(r[2]); return null;
+}
+
+var start=GetQueryString("start");
+var w=($(window).width()) *1.1;
+$(function () {
+    $("#sliderA").excoloSlider({
+    	startSlide : start,
+    	width:w,
+    	height:385,
+    	// prevButtonImage:"front/images/companyIntroduction/company_0000s_0002_l.png",
+    	// nextButtonImage:"front/images/companyIntroduction/company_0000s_0001_r.png",
+    	// prevButtonClass: "company_slide-prev",
+        // nextButtonClass: "company_slide-next",
+        // prevnextAutoHide:false,
+        // delay:2000,
+         autoPlay:false,
+         /*  autoSize:false,
+         touchNav:true, */
+         prevnextAutoHide: false
+         
+    	//	 pagerImage:"front/images/companyIntroduction/company_0000s_0000s_0000_p.png"
+    			 
+    		 
+    		/* 	 width：焦点图区域宽度
+    			 height：焦点图区域高度
+    			 autoSize：是否自动调节图片尺寸 true false
+    			 touchNav：是否允许触摸切换 true false
+    			 mouseNav：是否允许鼠标按下切换 true false
+    			 prevnextAutoHide：离开区域左右按钮是否自动隐藏true false
+    			 autoPlay：是否自动播放 true false
+    			 delay：延迟时间 毫秒 
+    			 repeat：是否重复播放 true false;
+    			 prevButtonClass：左切换按钮自定义样式
+    			 nextButtonClass：右切换按钮自定义样式
+    			 prevButtonImage：左切换按钮图片
+    			 nextButtonImage：右切换按钮图片
+    			 pagerClass：圆点切换按钮自定义样式
+    			 pagerImage：圆点切换按钮图片 */
+    }
+    		);
+    
+    
+    $( ".naianfen" ).mouseover(function() {
+    	$( ".naianfenhover" ).css("display","block");
+    	if(this.id=="_2006"){
+    		 $("#naianfenhoverimg").attr("src","");
+    		 $("#naianfenhoverimg").attr("src","front/images/companyIntroduction/company_pinpai_0000s_0000s_0002_2006.png");
+    	}else if(this.id=="_2007"){
+    		 $("#naianfenhoverimg").attr("src","");
+    		 $("#naianfenhoverimg").attr("src","front/images/companyIntroduction/company_pinpai_0000s_0000s_0001_2008.png");
+    	}else if(this.id=="_2008"){
+    		 $("#naianfenhoverimg").attr("src","");
+    		 $("#naianfenhoverimg").attr("src","front/images/companyIntroduction/company_pinpai_0000s_0000s_0000_2011.png");
+    	}else if(this.id=="_2009"){
+    		 $("#naianfenhoverimg").attr("src","");
+    		 $("#naianfenhoverimg").attr("src","front/images/companyIntroduction/company_pinpai_0000s_0000s_0000_2013.png");
+    	}else if(this.id=="_2010"){
+    		 $("#naianfenhoverimg").attr("src","");
+    		 $("#naianfenhoverimg").attr("src","");
+    		 $("#naianfenhoverimg").attr("src","front/images/companyIntroduction/company_pinpai_0000s_0000s_0000_2014.png");
+    	}else if(this.id=="_2011"){
+    		 $("#naianfenhoverimg").attr("src","front/images/companyIntroduction/company_pinpai_0000s_0000s_0000_now.png");
+    	}
+    	});
+    $( ".naianfen" ).mouseout(function() {
+    	$( ".naianfenhover" ).css("display","none");
+    	});
+    
+    /* $(".xian" ).mouseover(function() {
+    	$( "#xian" ).css("background-image","url('front/images/companyIntroduction/company_xiaoshou_0000s_0000s_0000s_0000s_0001_caise.png')");
+   // 	 background-image: url("front/images/companyIntroduction/company_xiaoshou_0000s_xian.png");
+    	});
+    $( ".xian" ).mouseout(function() {
+    	$( "#xian" ).css("background-image","url('front/images/companyIntroduction/company_xiaoshou_0000s_xian.png')");
+    	});
+    $(".chengdu" ).mouseover(function() {
+    	$( "#chengdu" ).css("background-image","url('front/images/companyIntroduction/company_xiaoshou_0000s_0000s_0000s_0000s_0001_caise.png')");
+   // 	 background-image: url("front/images/companyIntroduction/company_xiaoshou_0000s_xian.png");
+    	});
+    $( ".chengdu" ).mouseout(function() {
+    	$( "#chengdu" ).css("background-image","url('front/images/companyIntroduction/company_xiaoshou_0000s_chengdu.png')");
+    	}); */
+    	 $(".chengdu" ).click(function() {
+    		 location.href = "http://j.map.baidu.com/V5zxt";
+    	 });
+    
+    	 $(".xian" ).click(function() {
+    		 location.href = "http://j.map.baidu.com/xWvxt";
+    	 });
+    
+    	$( ".shipin" ).css("margin-right",($(window).width())/2-600);
+    	$( ".nian" ).css("margin-right",($(window).width())/2-600);
+    	$( ".company_slide-next" ).css("margin-right",(($(window).width())/2-400)/2);
+    	$( ".company_slide-prev" ).css("margin-left",(($(window).width())/2-400)/2);
+    	/* $( "._2006" ).css("margin-left",(($(window).width())/2-600)/2);
+    	$( "._2009" ).css("margin-left",(($(window).width())/2-600)/2);
+    	$( "._2007" ).css("margin-left",(($(window).width())/2-600)/2);
+    	$( "._2008" ).css("margin-left",(($(window).width())/2-600)/2);
+    	$( "._2011" ).css("margin-left",(($(window).width())/2-600)/2);
+    	$( "._2010" ).css("margin-left",(($(window).width())/2-600)/2); */
+   	 
+  	 /*  $("#company_slide-prev").css("top",
+  				($(window).height()) *0.3);    */
+
+    
+});
+</script>
+</head>
+<body>
+<div  id="indexg0">
+			<img class="indexgimg" src="front/images/companyIntroduction/company_0000.png" />
+  
+		</div>
+<div id="indexg1" class="company">
+		<a id="companyx" href="front/aboutus.html"><img src="front/images/companyIntroduction/company_0000s_0000s_0000_X.png" alt="返回" /></a>
+			<div id="sliderA" class="slider">
+				<div>
+				<div id="jieshaozuo" class="jieshaozuo">
+				<img class=""  src="front/images/companyIntroduction/company_jieshao_0000s.png"></img></div>
+				<div class="shipin">
+				<a href="http://v.youku.com/v_show/id_XNTg5NDAzNzc2.html" target="_blank"><img class="shipinimg" src="front/images/companyIntroduction/qiye_0000s_0000_shipin.png"></img></a>
+				</div>
+			</div>
+			  <div >
+			  <div id="pinpaizuo" class="pinpaizuo">
+			  <img  class=""  src="front/images/companyIntroduction/company_pinpai_0000s.png" alt="" /></div>
+				<div class="nian">
+				<div id="_2006" class="_2006 naianfen"></div>
+				<div id="_2007" class="_2007 naianfen"></div>
+				<div id="_2008" class="_2008 naianfen"></div>
+				<div id="_2009" class="_2009 naianfen"></div>
+				<div id="_2010" class="_2010 naianfen"></div>
+				<div id="_2011" class="_2011 naianfen"></div>
+				</div>
+				</div>
+				<div>
+				<div class="wenhuazuo" >
+				<img  class="" src="front/images/companyIntroduction/company_wenhua_0000s_0000s_0001_zuo.png" />	 </div>
+				<div class="nian" >
+				<img  class="youimg"  src="front/images/companyIntroduction/company_wenhua_0000s_0000s_0000_you.png" />	
+				</div> 
+				</div>
+				<div >
+				
+				<div id="xian" class="xian" ><span>西安公司</span><a href="http://j.map.baidu.com/xWvxt" target="_blank">进入地图>></a>
+				<p>西安市莲湖区西关正街 258号御笔华章小区1号楼2706室  TEL：029-81320097</p>
+				</div>
+				<div id="chengdu" class="chengdu" ><span>成都公司</span><a href="http://j.map.baidu.com/V5zxt" target="_blank">进入地图>></a>
+				<p>成都市青羊区小南街101号（旭和倾城）1栋1单元506 TEL：028-66523491</p>
+				</div>
+				</div> 
+			</div>
+						
+<div class="naianfenhover">
+<img id="naianfenhoverimg" alt="" src="" />  </div>
+	</div>
+	<script type="text/javascript">
+$(function() {
+
+	  $(".slide-prev").css("left", ($(window).width()) /2-400-40-100);  
+	  $(".slide-next").css("right",
+			($(window).width()) /2-400-40-100);  
+	
+	 
+})
+</script>
+</html>
+	
+</body>

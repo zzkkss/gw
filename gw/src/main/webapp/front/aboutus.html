@@ -1,0 +1,251 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>果园老农--关于我们</title>
+ <script src="jscss/js/jquery-1.9.1.min.js" type="text/javascript"></script>
+ <script src="jscss/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+  <link href="jscss/jquery-ui/jquery-ui.min.css" rel="stylesheet" />
+<script>
+
+
+ 
+	$(function() {
+		var index_div_pro = [ {
+			sx : -1,
+			chushibilv:0,
+			chushiweiyi:0,
+			mh : 0.02
+		}, {
+			sx : 1,
+			chushibilv:0.5,
+			chushiweiyi:120,
+			mh : 0.01
+		} ];
+		var ePageX = $(window).width() / 2;
+		/*  $("#indexg0").css("margin-left",
+					($(window).width()-($(window).width()) *120/100) / 2); */
+			  $("#indexg0").css("width",
+					($(window).width()) *1.1);  
+			    $("#indexg1").css("left",
+						($(window).width())*0.5-120);    
+		/* $("#indexg1").css("margin-left",
+				($(window).width()) *0.45);  */
+		function getMousePos(expression) {
+			if (ePageX == null)
+				return null;
+			var _x = $(expression).position().left;
+			_x += ePageX - $(expression).parent().position().left;
+			return {
+				x : _x
+			}
+		}
+		;
+	/* 	var index_xh = setInterval(function() {
+			for (var i = 0; i < 2; i++) {
+				var mousepos = getMousePos("#indexg" + i);
+				if (mousepos != null) {
+					var left = parseInt($("#indexg" + i).css("left"));
+					var l = ($(window).width()*index_div_pro[i].chushibilv-index_div_pro[i].chushiweiyi+ (mousepos.x)*index_div_pro[i].mh)
+					*index_div_pro[i].sx;
+					$("#indexg" + i).css({
+						left : l
+					})
+				}
+			}
+		}, 20); */
+		$("body").mousemove(function(event) {
+			event = event || window.event;
+			ePageX = event.pageX
+		});
+	
+		
+		
+		// run the effect
+		//$( "#gongsi" ).toggle( "explode", '', 500 );
+		//$( "#gongsi" ).toggle( "puff", '', 1000, '');
+		$( "#gongsijianjie" ).show( "explode",'', 1000,
+				function(){$( "#pinpaigushi" ).show( "explode",'', 500,
+						function(){$( "#qiyewenhua" ).show( "explode",'', 500,
+								function(){$( "#wangluoxiaoshou" ).show( "explode",'', 500,''
+								);}
+						);}
+				);});
+		$( "#wang" ).show( "explode",'' ,1000,
+				function(){$( "#qiye" ).show( "explode",'', 500,
+						function(){$( "#pinpai" ).show( "explode",'', 500,
+								function(){$( "#gongsi" ).show( "explode",'', 500,''
+								);});});});
+		
+		
+	})
+</script>
+    <style type="text/css">
+    .wangluoxiaoshou {
+  background-image: url("front/images/aboutus/aboutus_0000s_0011.png");
+  position: absolute;
+  left: 215px;
+  top: 458px;
+  width: 187px;
+  height: 187px;
+  z-index: 124;
+  display: none;
+}
+.wangluoxiaoshou:hover{
+  background-image: url("front/images/aboutus/aboutus_0000s_0003.png");
+}
+  .qiyewenhua {
+  background-image: url("front/images/aboutus/aboutus_0000s_0010.png");
+  position: absolute;
+  left: 285px;
+  top: 177px;
+  width: 185px;
+  height: 185px;
+  z-index: 125;
+    display: none;
+}
+.qiyewenhua:hover{
+  background-image: url("front/images/aboutus/aboutus_0000s_0002.png");
+}
+.pinpaigushi {
+  background-image: url("front/images/aboutus/aboutus_0000s_0009.png");
+  position: absolute;
+  left: -155px;
+  top: 455px;
+  width: 184px;
+  height: 184px;
+  z-index: 126;
+    display: none;
+}
+.pinpaigushi:hover{
+  background-image: url("front/images/aboutus/aboutus_0000s_0001.png");
+}
+
+.gongsijianjie {
+  background-image: url("front/images/aboutus/aboutus_0000s_0008.png");
+  position: absolute;
+  left: -235px;
+  top: 168px;
+  width: 187px;
+  height: 187px;
+  z-index: 127;
+    display: none;
+}
+.gongsijianjie:hover{
+  background-image: url("front/images/aboutus/aboutus_0000s_0000.png");
+}
+#nuts {
+  background-image: url("front/images/aboutus/aboutus_0000_6.png");
+  position: absolute;
+  top: 214px;
+  width: 260px;
+  height: 349px;
+  z-index: 2;
+}
+#gongsi {
+  background-image: url("front/images/aboutus/aboutus_0000s_0000_+.png");
+  position: absolute;
+  left: 193px;
+  top: 472px;
+  width: 17px;
+  height: 16px;
+  z-index: 11;
+    display: none;
+}
+#pinpai {
+  background-image: url("front/images/aboutus/aboutus_0000s_0000_+.png");
+  position: absolute;
+  left: 204px;
+  top: 313px;
+  width: 17px;
+  height: 16px;
+  z-index: 10;
+    display: none;
+}
+#qiye {
+  background-image: url("front/images/aboutus/aboutus_0000s_0000_+.png");
+  position: absolute;
+  left: 24px;
+  top: 448px;
+  width: 17px;
+  height: 16px;
+  z-index: 9;
+    display: none;
+}
+#wang {
+  background-image: url("front/images/aboutus/aboutus_0000s_0000_+.png");
+  position: absolute;
+  left: 30px;
+  top: 288px;
+  width: 17px;
+  height: 16px;
+  z-index: 8;
+    display: none;
+}
+
+
+
+    #indexg1, #indexg0 {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+ .indexgimg {
+width: 100%;
+height: 100%;
+}
+    </style>
+    <script type="text/javascript">
+    $(function() {
+    $( ".jia" ).click(function() {
+    	if(this.id=="wang"){
+    		if($(".gongsijianjie").css("display")=="none"){
+    			$(".gongsijianjie").css("display","block");
+    		}else{
+    			$(".gongsijianjie").css("display","none");
+    		}
+    	}else if(this.id=="qiye"){
+    		if($(".pinpaigushi").css("display")=="none"){
+    			$(".pinpaigushi").css("display","block");
+    		}else{
+    			$(".pinpaigushi").css("display","none");
+    		}
+    	}else if(this.id=="gongsi"){
+    		if($(".wangluoxiaoshou").css("display")=="none"){
+    			$(".wangluoxiaoshou").css("display","block");
+    		}else{
+    			$(".wangluoxiaoshou").css("display","none");
+    		}
+    	}else if(this.id=="pinpai"){
+    		if($(".qiyewenhua").css("display")=="none"){
+    			$(".qiyewenhua").css("display","block");
+    		}else{
+    			$(".qiyewenhua").css("display","none");
+    		}
+    	}
+    	});
+    	});
+    </script>
+</head>
+<body>
+	<div>
+		<div  id="indexg0">
+			<img class="indexgimg" src="front/images/aboutus/aboutus_00002.png" width="1800" height="768">
+  
+		</div>
+		<div id="indexg1">
+			<div id="nuts"></div>
+			<div id="gongsi" class="jia"></div>
+			<div id="wang" class="jia"></div>
+			<div id="qiye" class="jia"></div>
+			<div id="pinpai" class="jia"></div>
+			<a href="front/companyIntroduction.html?start=4" class="wangluoxiaoshou" id="wangluoxiaoshou"></a>
+			<a href="front/companyIntroduction.html?start=3" class="qiyewenhua" id="qiyewenhua"></a> <a
+				href="front/companyIntroduction.html?start=2" class="pinpaigushi" id="pinpaigushi"></a> <a
+				href="front/companyIntroduction.html?start=1" class="gongsijianjie" id="gongsijianjie"></a>
+		</div>
+
+	</div>
+</body>
+</html>
